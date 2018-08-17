@@ -1,0 +1,249 @@
+/*CSS card carousel newwerwer*/
+
+/* equal card height */
+.row-equal > div[class*='col-'] {
+    display: flex;
+    flex: 1 0 auto;
+} 
+
+.row-equal .card {
+   width: 100%;
+}
+
+/* ensure equal card height inside carousel */
+.carousel-inner>.row-equal.active, 
+.carousel-inner>.row-equal.next, 
+.carousel-inner>.row-equal.prev {
+    display: flex;
+} 
+
+/* prevent flicker during transition */
+.carousel-inner>.row-equal.active.left, 
+.carousel-inner>.row-equal.active.right {
+    opacity: 0.5;
+    display: flex;
+}
+
+
+/* control image height */
+.card-img-top-250 {
+    max-height: 350px;
+    overflow:hidden;
+    margin: 0 auto;
+}
+
+/* card image height */
+.img-fluid {
+    height: 350px; 
+}
+
+/* card column padding and border */
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 0px;
+}
+.col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 0px;
+}
+
+/* font styling */
+p.carousel-copy {
+    font-family:'roboto';
+    font-weight:300;
+    padding-top:5px;
+    padding-bottom:5px;
+    font-size:14px;
+    line-height:1.44;
+    letter-spacing:.4px;
+    display:-webkit-box;-webkit-box-orient:vertical; 
+    overflow:hidden;
+    text-overflow:ellipsis;
+    color:#000;
+ }
+ 
+p.carousel-header {   
+    color: #005095;
+    font-size: 22px;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'robotoslab';
+    font-weight: 700;
+}
+
+p.header {   
+    color: #000;
+    font-size: 36px;
+    white-space: nowrap !important;
+    font-family: 'robotoslab';
+    font-weight: 700;
+}
+
+p {
+    margin: 0 auto;
+    text-align: center;
+    padding-top:5px;
+    font-family:'roboto';
+    font-weight: 0;
+    font-size:16px;
+    line-height:1.44;
+    letter-spacing:.4px;
+    display:-webkit-box;-webkit-box-orient:vertical; 
+    overflow:hidden;
+    text-overflow:ellipsis;
+    color:#000;
+}
+
+/* ANIMATION */
+/* button animation */
+#hoverdiv:hover .btn-style.btn-color-blue {
+    background-color: #01a3fe;
+    color: #ffffff;
+    font-family:'roboto';
+    font-weight:300;
+    font-size:16px;
+    line-height:1.44;
+    letter-spacing:.4px;
+    display:-webkit-box;-webkit-box-orient:vertical; 
+    width: 100%;
+    transform: translateY(25%);
+}
+
+.btn-style.btn-color-blue {
+    animation-delay: 1s;
+    background-color: #ffffff;
+    color: #01a3fe;
+    font-family:'roboto';
+    font-weight:300;
+    font-size:16px;
+    line-height:1.44;
+    letter-spacing:.4px;
+    width: 100%;
+    display:-webkit-box;-webkit-box-orient:vertical; 
+    transition: 0.5s linear 0.5s;
+    opacity 0.5s linear;
+    border: none;
+    transform: translateY(-75%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+/* text animation */
+#hoverdiv:hover #hovertext {
+    opacity:1;
+    transition: all ease-in 0.5s 0s;
+    height: auto;
+    padding: 10px 0px 10px 0px;
+    -moz-transform: perspective(300px) rotateX(-360deg);
+    -webkit-transform: perspective(300px) rotateX(-360deg);
+    transform: perspective(300px) rotateX(-360deg);
+}
+
+#hovertext {
+    animation-delay: 4.5s;
+    opacity:0;
+    opacity 0.5s linear;
+    overflow: hidden;
+    height: 0;
+    padding: 0px;
+    display: inline-block;
+    transform: rotateX(270deg);
+    -webkit-transform: rotateX(270deg);
+    -moz-transform: rotateX(270deg);
+    -o-transform: rotateX(270deg);
+    transform-origin: center top;
+    -webkit-transform-origin: center top;
+    -moz-transform-origin: center top;
+    -o-transform-origin: center top;
+    -webkit-animation: flipUp 0.5s ease-out;
+    -moz-animation: flipUp 0.5s ease-out;
+    -o-animation: flipUp 0.5s ease-out;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+/* control animation */
+#animatedCarousel:hover #prevarrow {
+    opacity:1;
+    transition-delay:0s;
+    height: auto;
+    }
+
+#prevarrow {
+    animation-delay: 2s;
+    opacity:0;
+    transition: 0.5s linear 0.5s;
+    opacity: 0.5s linear;
+    overflow: hidden;
+}
+
+#animatedCarousel:hover #nextarrow {
+    opacity:1;
+    transition-delay:0s;
+    height: auto;
+}
+
+#nextarrow {
+    animation-delay: 2s;
+    opacity:0;
+    transition: 0.5s linear 0.5s;
+    opacity: 0.5s linear;
+    overflow: hidden;
+}
+
+/* card animation */
+.card {
+     margin-top: 15px;
+    -webkit-transition: margin 0.3s ease-out;
+    -moz-transition: margin 0.3s ease-out;
+    -o-transition: margin 0.3s ease-out;
+     border: 0px; 
+}
+
+.card:hover {
+    margin-top: 2px; 
+}
+
+/* card block animation */
+#hoverdiv:hover .card-block {
+    transform: translateY(-50%);
+    border: 1px solid rgba(0,0,0,.125); 
+}
+
+.card-block {
+    background-color: #fff;
+    -webkit-transition: transform .6s ease-in-out;  
+    -moz-transition: transform .6s ease-in-out;  
+    -o-transition: transform .6s ease-in-out;   
+}
+
+/* control styling */
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#01a3fe' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+  .carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#01a3fe' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")
+}
+
+/* mobile responsive styling */
+
+@media only screen and (max-width: 768px) {
+
+p.header {   
+    color: #000;
+    font-size: 22px;
+    white-space: nowrap !important;
+    font-family: 'robotoslab';
+    font-weight: 700;
+}
